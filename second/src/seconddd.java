@@ -8,14 +8,25 @@ public class seconddd {
             int a = 1;
             int b = 2;
             int c = 3;
-            System.out.println("Die Summe betraegt: " + summe(a,b,c));
+            System.out.println("Die Summe betraegt: " + Summe(a,b,c));
 
 
         }
 
-        public static int summe(int a, int b, int c){
+        private static int Summe(int a, int b, int c){
             int summe = a + b + c;
-            return summe;
+            int summe2 = a + (int)Math.sqrt(b) - c;
+            int result;
+
+            if(summe > summe2){
+                result = summe;
+            } else if (summe < summe2){
+                result = summe2;
+            } else {
+                return summe;
+            }
+
+            return result;
         }
 
 
