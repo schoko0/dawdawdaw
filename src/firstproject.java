@@ -9,6 +9,7 @@ public class firstproject {
         int b = 2;
         int c = 3;
         summe(a,b,c);
+
     }
 
     public int summe(int a, int b, int c){
