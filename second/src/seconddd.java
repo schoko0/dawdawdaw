@@ -9,6 +9,7 @@ public class seconddd {
             int b = 2;
             int c = 3;
             System.out.println("Die Summe betraegt: " + Summe(a,b,c));
+            System.out.println("Die Raumlaenge betraegt: " + Summe(a,b,c));
 
 
         }
