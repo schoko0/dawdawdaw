@@ -23,11 +23,6 @@ public class seconddd {
                 result = summeb;
             }
             return result;
-<<<<<<< HEAD
-            //test test789
-            //test test
-=======
->>>>>>> lane
 
         }
 
