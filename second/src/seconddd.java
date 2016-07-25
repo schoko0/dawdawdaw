@@ -1,6 +1,4 @@
-/**
- * Created by sniendorf on 22.07.2016.
- */
+
 public class seconddd {
 
 
@@ -25,8 +23,9 @@ public class seconddd {
                 result = summeb;
             }
             return result;
+            //test test123
             //test test
-            //test test
+
         }
 
 
