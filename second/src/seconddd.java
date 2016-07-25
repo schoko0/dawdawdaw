@@ -15,18 +15,15 @@ public class seconddd {
         }
 
         private static int Summe(int a, int b, int c){
-            int summe = a + b + c;
-            int summe2 = a + (int)Math.sqrt(b) - c;
+            int summea = a + b + c;
+            int summeb = a + (int)Math.sqrt(b) - c;
             int result;
 
-            if(summe > summe2){
-                result = summe;
-            } else if (summe < summe2){
-                result = summe2;
+            if(summea > summeb){
+                result = summea;
             } else {
-                return summe;
+                result = summeb;
             }
-
             return result;
         }
 
