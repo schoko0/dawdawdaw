@@ -2,7 +2,7 @@
 public class seconddd {
 
 
-        public static void main(String[] args) {
+        public void main(String[] args) {
             int a = 1;
             int b = 2;
             int c = 3;
@@ -12,7 +12,7 @@ public class seconddd {
 
         }
 
-        private static int Summe(int a, int b, int c){
+        private int Summe(int a, int b, int c){
             int summea = a + b + c;
             int summeb = a + (int)Math.sqrt(b) - c;
             int result;
