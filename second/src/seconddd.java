@@ -15,6 +15,7 @@ public class seconddd {
         }
 
         private static int Summe(int a, int b, int c){
+<<<<<<< HEAD
             int summe = a + b + c;
             int summe2 = a + (int)Math.pow(b,2) - c;
             int result;
@@ -23,8 +24,17 @@ public class seconddd {
                 result = summe;
             } else {
                 result = summe2;
-            }
+=======
+            int summea = a + b + c;
+            int summeb = a + (int)Math.sqrt(b) - c;
+            int result;
 
+            if(summea > summeb){
+                result = summea;
+            } else {
+                result = summeb;
+>>>>>>> lane
+            }
             return result;
         }
 
