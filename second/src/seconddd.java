@@ -23,8 +23,6 @@ public class seconddd {
                 result = summeb;
             }
             return result;
-            //test test1213213213132131213
-            //test test45465465789798797
 
         }
 
