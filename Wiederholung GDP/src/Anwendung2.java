@@ -52,13 +52,6 @@ public class Anwendung2 {
             }
 
             panel.sleep(1);
-<<<<<<< HEAD
-        }
-//test
-        //lhblhkblz
-=======
-        }//test
 
->>>>>>> ee1e40557029651b86fdda794f198944b02471e8
     }
 }
