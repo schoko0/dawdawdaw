@@ -7,6 +7,7 @@ public class Quadrat implements Geometrie{
 
     private double laenge;
 
+
     public Quadrat(double laenge){
         setLaenge(laenge);
     }
