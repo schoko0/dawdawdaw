@@ -1,3 +1,5 @@
+package Praktikum_9;
+
 import edu.unibw.etti.graphics.Position;
 import java.awt.Graphics2D;
 import java.awt.MultipleGradientPaint;
@@ -10,7 +12,7 @@ import java.awt.Graphics;
 /**
  * Created by sniendorf on 26.07.2016.
  */
-public class Kreis {
+public abstract class Kreis {
 
 
     public double radius;
@@ -96,7 +98,7 @@ public class Kreis {
 
 
     public static void mischeFarben(Kreis k1, Kreis k2){
-//        if(Kreis.kollidieren(k1, k2)) {
+//        if(Praktikum_9.Kreis.kollidieren(k1, k2)) {
 //            float[] f1 = k1.color.getComponents(null);
 //            float[] f2 = k2.color.getComponents(null);
 //

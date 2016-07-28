@@ -6,8 +6,8 @@ package edu.unibw.etti.graphics;
  */
 public class Position {
 
-    public static final int X_MAX = 600;
-    public static final int Y_MAX = 400;
+    public static final int X_MAX = 1280;
+    public static final int Y_MAX = 720;
     private double x = 0;
     private double y = 0;
 

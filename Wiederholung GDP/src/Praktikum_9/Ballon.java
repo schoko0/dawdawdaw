@@ -1,3 +1,5 @@
+package Praktikum_9;
+
 import edu.unibw.etti.graphics.Position;
 
 import java.awt.*;

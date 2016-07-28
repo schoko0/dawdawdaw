@@ -1,3 +1,5 @@
+package Praktikum_9;
+
 import java.awt.*;
 
 /**

@@ -1,3 +1,5 @@
+package Praktikum_9;
+
 import edu.unibw.etti.graphics.GraphicsPanel;
 import edu.unibw.etti.graphics.Position;
 
@@ -12,15 +14,15 @@ public class Anwendung {
         GraphicsPanel panel = new GraphicsPanel("Kreise", Position.X_MAX, Position.Y_MAX);
         Graphics graphics = panel.createGraphics();
 
-        // Kreis malen_______________________________________________________________________________
+        // Praktikum_9.Kreis malen_______________________________________________________________________________
     /*
-        Kreis k = new Kreis(175.5, 210.5, 75.5, Color.red);
+        Praktikum_9.Kreis k = new Praktikum_9.Kreis(175.5, 210.5, 75.5, Color.red);
         k.anzeigen(graphics);
         panel.showGraphics();
     */
-        // Snooker
+        // Praktikum_9.Snooker
     /*
-        Snooker k = new Snooker(175.5, 210.5, 25.0, Color.magenta, 0.5, -0.3);
+        Praktikum_9.Snooker k = new Praktikum_9.Snooker(175.5, 210.5, 25.0, Color.magenta, 0.5, -0.3);
         while (true) {
             graphics.setColor(Color.white);
             graphics.fillRect(0, 0, Position.X_MAX, Position.Y_MAX);
@@ -31,7 +33,7 @@ public class Anwendung {
     */
         // Ballon_____________________________________________________________________________________
     /*
-        Ballon k = new Ballon(150.0, 210.5, Color.cyan, 0.5);
+        Praktikum_9.Ballon k = new Praktikum_9.Ballon(150.0, 210.5, Color.cyan, 0.5);
         while (true) {
             graphics.setColor(Color.white);
             graphics.fillRect(0, 0, Position.X_MAX, Position.Y_MAX);
@@ -58,13 +60,13 @@ public class Anwendung {
 
             switch (i % varianten) {
 //                case 0:
-//                    kreise[i] = new Snooker(x, y, 25.0, Color.red, 1.0, 1.0);
+//                    kreise[i] = new Praktikum_9.Snooker(x, y, 25.0, Color.red, 1.0, 1.0);
 //                    break;
 //                case 1:
-//                    kreise[i] = new Ballon(x, y, Color.blue, 1.0);
+//                    kreise[i] = new Praktikum_9.Ballon(x, y, Color.blue, 1.0);
 //                    break;
 //                case 2:
-//                    kreise[i] = new Dominant(x, y, 20, SimpleGraphicPanel.getRandomColor());
+//                    kreise[i] = new Praktikum_9.Dominant(x, y, 20, SimpleGraphicPanel.getRandomColor());
 //                    break;
                 case 0:
                     kreise[i] = new Planet(x, y, 10, Color.red,(Math.random() * 100 + 25), 1);
@@ -79,17 +81,17 @@ public class Anwendung {
 //            graphics.setColor(Color.white);
 //            graphics.fillRect(0, 0, Position.X_MAX + 100, Position.Y_MAX + 100);
 //
-//            for (Kreis k : kreise) {
+//            for (Praktikum_9.Kreis k : kreise) {
 //                k.anzeigen(graphics);
 //                GraphicsPanel.sleep(1);
 //            }
 //            panel.showGraphics();
 //            for(int i = 0; i < kreise.length; i++){
 //                for(int j = 1; j < kreise.length -1; j++){
-//                    Kreis.mischeFarben(kreise[i], kreise[j]);
+//                    Praktikum_9.Kreis.mischeFarben(kreise[i], kreise[j]);
 //                }
 //            }
-//            for (Kreis k : kreise) {
+//            for (Praktikum_9.Kreis k : kreise) {
 //                k.bewegen();
 //            }
 //        }

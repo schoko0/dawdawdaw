@@ -1,3 +1,5 @@
+package Praktikum_9;
+
 import edu.unibw.etti.graphics.GraphicsPanel;
 import edu.unibw.etti.graphics.Position;
 
