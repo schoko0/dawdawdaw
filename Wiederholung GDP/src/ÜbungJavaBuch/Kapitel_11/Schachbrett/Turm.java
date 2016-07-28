@@ -1,4 +1,4 @@
-package ÜbungJavaBuch.Kapitel_11;
+package ÜbungJavaBuch.Kapitel_11.Schachbrett;
 
 /**
  * Created by sniendorf on 28.07.2016.
