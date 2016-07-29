@@ -13,14 +13,19 @@ public class A {
         polygon.add(new Point(2, 1));
         polygon.add(new Point(2, 2));
         polygon.add(new Point(2, 1));
+
         polygon.forEach(m -> System.out.format("(%d , %d)\n", m.x, m.y));
+
 
         Random rnd = new Random();
         Set<Integer> lotto = new HashSet<>();
+
         do {
             lotto.add(rnd.nextInt(49));
         }while(lotto.size() < 6);
+
         System.out.println( Arrays.toString(lotto.toArray()));
+
 
         Map<String, String > dict = new HashMap<>();
         dict.put("one", "eins");
@@ -29,6 +34,7 @@ public class A {
         dict.put("four", "vier");
         dict.put("five", "fünf");
         dict.put("Nur der", "BVB");
+
         System.out.println(dict.get("three"));
         System.out.println(dict.get("Nur der"));
     }
