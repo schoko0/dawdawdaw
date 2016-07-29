@@ -1,4 +1,4 @@
-package KomplexeZahlen.WeitereAufgabe;
+package Übungen.WeitereAufgabe;
 
 /**
  * Created by sniendorf on 29.07.2016.

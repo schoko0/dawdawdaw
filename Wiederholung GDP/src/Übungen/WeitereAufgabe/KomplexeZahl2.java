@@ -1,4 +1,4 @@
-package KomplexeZahlen.WeitereAufgabe;
+package Übungen.WeitereAufgabe;
 
 /*
  * Abstrakter Datentyp, der eine komplexe Zahl und
