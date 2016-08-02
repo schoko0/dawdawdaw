@@ -1,6 +1,4 @@
-package Übungen;
-
-import com.sun.org.apache.xpath.internal.SourceTree;
+package Übungen.KomplexeZahlen;
 
 /**
  * Created by sniendorf on 25.07.2016.

@@ -1,4 +1,4 @@
-package Übungen.WeitereAufgabe.DiesDas;
+package Übungen.DiesDas;
 
 /**
  * Created by sniendorf on 29.07.2016.

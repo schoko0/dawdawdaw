@@ -1,4 +1,4 @@
-package Übungen.WeitereAufgabe;
+package Übungen.KmplxZhlnVonAndererQuelle;
 
 /*
  * Abstrakter Datentyp, der eine komplexe Zahl und

@@ -1,4 +1,4 @@
-package Übungen.WeitereAufgabe.BeliebigeDezimalzahlen;
+package Übungen.BeliebigeDezimalzahlen;
 
 /**
  * Created by sniendorf on 29.07.2016.

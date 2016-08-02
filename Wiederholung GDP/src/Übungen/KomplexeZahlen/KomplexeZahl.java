@@ -1,4 +1,4 @@
-package Übungen;
+package Übungen.KomplexeZahlen;
 
 /**
  * Created by sniendorf on 25.07.2016.

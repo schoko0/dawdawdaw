@@ -1,4 +1,4 @@
-package Übungen.WeitereAufgabe.kartesische_Koordinaten;
+package Übungen.kartesische_Koordinaten;
 
 
 /**

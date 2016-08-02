@@ -1,4 +1,4 @@
-package Übungen.WeitereAufgabe;
+package Übungen.KmplxZhlnVonAndererQuelle;
 
 /**
  * Created by sniendorf on 29.07.2016.

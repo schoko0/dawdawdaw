@@ -1,6 +1,4 @@
-package Übungen.WeitereAufgabe.kartesische_Koordinaten;
-
-import Praktikum_9.Anwendung;
+package Übungen.kartesische_Koordinaten;
 
 /**
  * Created by sniendorf on 29.07.2016.

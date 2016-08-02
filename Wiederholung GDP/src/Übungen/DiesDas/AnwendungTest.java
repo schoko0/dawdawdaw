@@ -1,4 +1,4 @@
-package Übungen.WeitereAufgabe.DiesDas;
+package Übungen.DiesDas;
 
 import java.util.HashSet;
 import java.util.Set;
