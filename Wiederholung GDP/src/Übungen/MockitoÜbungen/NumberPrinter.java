@@ -17,6 +17,7 @@ public class NumberPrinter {
 
         for (int i = 1; i <= limit; i++) {
             try {
+                //System.out.println(numberCalculator.calculate(i));
                 printer.print(numberCalculator.calculate(i));
             } catch (Exception e) {
                 // noop
