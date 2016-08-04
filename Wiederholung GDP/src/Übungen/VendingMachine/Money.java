@@ -5,5 +5,5 @@ package Übungen.VendingMachine;
  */
 public class Money {
 
-    public
+
 }
