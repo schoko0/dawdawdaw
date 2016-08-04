@@ -48,7 +48,7 @@ public class GraphicsPanel {
 
     /**
      * Konstruktor zur Erzeugung eines <tt>GraphicsPanel</tt>. Achtung: Beim
-     * Aufruf des Konstruktors wird noch kein Fenster ge&ouml;ffnet. Dazu muss
+     * TwitterTest des Konstruktors wird noch kein Fenster ge&ouml;ffnet. Dazu muss
      * erst noch die Methode <tt>showGraphics</tt> oder <tt>createGraphics</tt>
      * aufgerufen werde!
      *
@@ -64,7 +64,7 @@ public class GraphicsPanel {
     }
 
     /**
-     * Der Aufruf dieser Methode erzwingt das Anzeigen der Objekte, die auf
+     * Der TwitterTest dieser Methode erzwingt das Anzeigen der Objekte, die auf
      * <tt>Graphics</tt> gezeichnet wurden. Die gezeichneten Objekte werden
      * nicht gel&ouml;scht!
      */

@@ -1,4 +1,4 @@
-package Übungen.MockitoÜbungen;
+package Übungen.MockitoÜbungen.Anderes;
 
 import org.junit.Test;
 import org.mockito.Mock;

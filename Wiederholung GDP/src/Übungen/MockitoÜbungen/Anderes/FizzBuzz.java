@@ -1,4 +1,4 @@
-package Übungen.MockitoÜbungen;
+package Übungen.MockitoÜbungen.Anderes;
 
 
 public class FizzBuzz {

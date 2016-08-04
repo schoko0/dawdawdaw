@@ -1,4 +1,4 @@
-package Übungen.MockitoÜbungen;
+package Übungen.MockitoÜbungen.NumberPrinter;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

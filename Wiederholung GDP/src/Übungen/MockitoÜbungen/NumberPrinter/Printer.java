@@ -1,4 +1,4 @@
-package Übungen.MockitoÜbungen;
+package Übungen.MockitoÜbungen.NumberPrinter;
 
 /**
  * Created by sniendorf on 02.08.2016.
