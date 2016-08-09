@@ -58,16 +58,19 @@ public class Test {
 
         }
 
-        int inputMoney;// = in.nextInt();
+        int inputMoney;
         int amountOfInputMoney = 0;
 
         while (amountOfInputMoney < moneyWhichNeedsToBePaid) {
 
             inputMoney = in.nextInt();
-            amountOfInputMoney += inputMoney;
+
+            if(CheckInputMoney.checkInputMoney(inputMoney)) {
+                amountOfInputMoney += inputMoney;
+            }
             System.out.println(amountOfInputMoney);
 
         }
-//        System.out.println(amountOfInputMoney);
+
     }
 }
