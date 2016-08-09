@@ -5,12 +5,12 @@ package Übungen.VendingMachine;
  */
 public class Collection {
 
-    private String candy;
-    private String snack;
-    private String nuts;
-    private String coke;
-    private String pepsi;
-    private String soda;
+    private static String candy;
+    private static String snack;
+    private static String nuts;
+    private static String coke;
+    private static String pepsi;
+    private static String soda;
 
     public Collection(String collection) {
         switch (collection) {
@@ -29,4 +29,45 @@ public class Collection {
         }
     }
 
+    public static String getCandy() {
+        return candy = "candy";
+    }
+
+    public String getCoke() {
+        return coke = "coke";
+    }
+
+    public String getNuts() {
+        return nuts = "nuts";
+    }
+
+    public String getPepsi() {
+        return pepsi = "pepsi";
+    }
+
+    public String getSnack() {
+        return snack = "snack";
+    }
+
+    public String getSoda() {
+        return soda = "soda";
+    }
+    public static int getCandyValue(){
+        return 50;
+    }
+    public static int getCokeValue(){
+        return 110;
+    }
+    public static int getNutsValue(){
+        return 125;
+    }
+    public static int getPepsiValue(){
+        return 150;
+    }
+    public static int getSnackValue(){
+        return 90;
+    }
+    public static int getSodaValue(){
+        return 115;
+    }
 }
