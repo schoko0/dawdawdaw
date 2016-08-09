@@ -5,68 +5,62 @@ package Übungen.VendingMachine;
  */
 public class Collection {
 
-    private static String candy;
-    private static String snack;
-    private static String nuts;
-    private static String coke;
-    private static String pepsi;
-    private static String soda;
 
-    public Collection(String collection) {
-        switch (collection) {
-            case "candy":
-                this.candy = collection;
-            case "snack":
-                this.snack = collection;
-            case "nuts":
-                this.nuts = collection;
-            case "coke":
-                this.coke = collection;
-            case "pepsi":
-                this.pepsi = collection;
-            case "soda":
-                this.soda = collection;
+
+    public static String getCollection (int choice){
+        switch (choice){
+            case 1: return getCandy();
+            case 2: return getSnack();
+            case 3: return getNuts();
+            case 4: return getCoke();
+            case 5: return getPepsi();
+            case 6: return getSoda();
         }
+        return "FALSCHE ZAHL EINGEGEBEN, BITTE WIEDERHOLEN SIE!";
     }
 
-    public static String getCandy() {
-        return candy = "candy";
+    public static String getCandy() { return  "CANDY"; }
+
+    public static String getCoke() {
+        return "COCA COLA";
     }
 
-    public String getCoke() {
-        return coke = "coke";
+    public static String getNuts() {
+        return  "NUTS";
     }
 
-    public String getNuts() {
-        return nuts = "nuts";
+    public static String getPepsi() {
+        return "PEPSI";
     }
 
-    public String getPepsi() {
-        return pepsi = "pepsi";
+    public static String getSnack() {
+        return "SNACK";
     }
 
-    public String getSnack() {
-        return snack = "snack";
+    public static String getSoda() {
+        return "SODA";
     }
 
-    public String getSoda() {
-        return soda = "soda";
-    }
     public static int getCandyValue(){
         return 50;
     }
+
     public static int getCokeValue(){
         return 110;
     }
+
     public static int getNutsValue(){
         return 125;
     }
+
     public static int getPepsiValue(){
         return 150;
     }
+
     public static int getSnackValue(){
         return 90;
     }
+
     public static int getSodaValue(){
         return 115;
     }

@@ -1,28 +1,31 @@
 package Übungen.VendingMachine;
 
+import java.util.Arrays;
 import java.util.Scanner;       //allows user input
 
 /**
  * Created by sniendorf on 04.08.2016.
  */
-public class Test {
+public class VendingMachine {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
         final int centsPerEuro = 100;
         final int centsPerTwoEuros = 200;
-        System.out.println("BITTE DIE ENTSPRECHENDE ZAHL EINGEBEN:\n\n" +
+        System.out.println(
+                    "BITTE DIE ENTSPRECHENDE ZAHL EINGEBEN:\n\n" +
+                    "1 = CANDY____________0,50 DOLLAR\n" +
+                    "2 = SNACK____________0,90 DOLLAR\n" +
+                    "3 = NUTS_____________1,25 DOLLAR\n" +
+                    "4 = COCA COLA________1,10 DOLLAR\n" +
+                    "5 = PEPSI____________1,50 DOLLAR\n" +
+                    "6 = SODA_____________1,15 DOLLAR\n\n" +
                     "FOLGENDE MÜNZEN SIND ERLAUBT: \n" +
-                    "1 EURO, 2 EURO, 50 CENTS, 20 CENTS, 10 CENTS , 5 CENTS\n\n" +
-                    "1= CANDY____________0,50 DOLLAR\n" +
-                    "2= SNACK____________0,90 DOLLAR\n" +
-                    "3= NUTS_____________1,25 DOLLAR\n" +
-                    "4= COCA COLA________1,10 DOLLAR\n" +
-                    "5= PEPSI____________1,50 DOLLAR\n" +
-                    "6= SODA_____________1,15 DOLLAR\n");
+                    "1 EURO, 2 EURO, 50 CENTS, 20 CENTS, 10 CENTS , 5 CENTS\n");
 
+        System.out.println("Eingabe: ");
         int inputOrder = in.nextInt();
-        System.out.printf("SIE HABEN DIE %d GEWÄHLT\n", inputOrder);
+        System.out.printf("SIE HABEN \"%s\" GEWÄHLT\n", Collection.getCollection(inputOrder));
         int moneyWhichNeedsToBePaid = 0;
 
         switch(inputOrder){
@@ -67,10 +70,12 @@ public class Test {
 
             if(CheckInputMoney.checkInputMoney(inputMoney)) {
                 amountOfInputMoney += inputMoney;
+//                System.out.println(amountOfInputMoney);
             }
-            System.out.println(amountOfInputMoney);
+//            System.out.println("RESTBETRAG: " + (moneyWhichNeedsToBePaid - amountOfInputMoney));
 
         }
+        System.out.println("RÜCKGELD" + Arrays.toString(Change.change(Math.abs(moneyWhichNeedsToBePaid - amountOfInputMoney))));
 
     }
 }
