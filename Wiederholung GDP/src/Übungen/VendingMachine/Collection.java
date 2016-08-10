@@ -6,7 +6,9 @@ package Übungen.VendingMachine;
 public class Collection {
 
 
-
+    public enum collectionTest{
+        CANDY,SNACK, NUTS, COKE, PEPSI, SODA
+    }
     public static String getCollection (int choice){
         switch (choice){
             case 1: return getCandy();

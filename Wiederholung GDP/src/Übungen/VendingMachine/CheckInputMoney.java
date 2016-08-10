@@ -5,7 +5,7 @@ package Übungen.VendingMachine;
  */
 public class CheckInputMoney {
 
-    static final private int[] allowedCoins = { 100, 200, 5, 10, 20, 50};
+    static final private int[] allowedCoins = { 2, 1, 5, 10, 20, 50};
 
 
     public static boolean checkInputMoney(int checkAmount) {
