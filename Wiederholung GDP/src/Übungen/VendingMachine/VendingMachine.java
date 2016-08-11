@@ -16,7 +16,7 @@ public class VendingMachine {
 //        final int centsPerEuro = 100;
 //        final int centsPerTwoEuros = 200;
 
-//        while(true) {
+        while(true) {
             System.out.println(
                     "BITTE DIE ENTSPRECHENDE ZAHL EINGEBEN:\n\n" +
                             "1 = CANDY____________0,50 DOLLAR\n" +
@@ -91,7 +91,13 @@ public class VendingMachine {
 
             }
             Change.change(Math.abs(moneyWhichNeedsToBePaid - amountOfInputMoney));
+        System.out.println("\nVIELEN DANK DASS SIE SICH FÜR DIESE MASCHINE ENTSCHIEDEN HABEN\n");
+        try{
+            Thread.sleep(6000);
+        }catch(InterruptedException e){
+            e.printStackTrace();
+        }
 //            System.out.println("\nRÜCKGELD" + Arrays.toString(Change.change(Math.abs(moneyWhichNeedsToBePaid - amountOfInputMoney))) + "\n\n______________________________________\n\n");
         }
-//    }
+    }
 }

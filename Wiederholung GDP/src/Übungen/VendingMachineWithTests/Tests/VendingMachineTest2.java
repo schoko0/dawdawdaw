@@ -1,10 +1,10 @@
-package Übungen.VendingMachineWithTests.Tests;
+package Übungen.vendingMachineWithTests.Tests;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import Übungen.VendingMachineWithTests.Operations;
+import Übungen.vendingMachineWithTests.Operations;
 
 import java.util.Arrays;
 import java.util.Collection;

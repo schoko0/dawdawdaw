@@ -1,4 +1,4 @@
-package Übungen.VendingMachineWithTests;
+package Übungen.vendingMachineWithTests;
 
 
 

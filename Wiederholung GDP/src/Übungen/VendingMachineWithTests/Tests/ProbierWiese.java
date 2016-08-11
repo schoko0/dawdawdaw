@@ -1,44 +1,51 @@
-package Übungen.VendingMachineWithTests.Tests;
+package Übungen.vendingMachineWithTests.Tests;
 
 
-import Übungen.VendingMachineWithTests.Collection.Candy;
+import Übungen.vendingMachineWithTests.Collection.Collection;
 
 import java.util.HashMap;
-import java.util.Map;
+
 
 public class ProbierWiese {
 
     public static void main(String[] args) {
 //        HashMap map = new HashMap();
 //
-//        Candy candy1 = new Candy(50);
+//        Collection candy1 = new Collection(50);
 //
 //        map.put(candy1.getStock(), candy1);
 //
 //        map.get(candy1.getStock());
         ProbierWiese wiese = new ProbierWiese();
-        Candy candy = new Candy();
-        HashMap<Candy, Integer> blubb = new HashMap<>();
-        blubb.put(candy, 50);
+        Collection collection = new Collection();
+        HashMap<Collection, Integer> blubb = new HashMap<>();
+
+        blubb.put(collection, collection.stockCandy);
+        System.out.println(blubb.get(collection));
+        wiese.valueIncreaseTest(blubb, collection);
+        System.out.println(blubb.get(collection));
+        wiese.valueDecreaseTest(blubb, collection);
+        wiese.valueDecreaseTest(blubb, collection);
+        System.out.println(blubb.get(collection));
 
 
-        System.out.println(blubb.get(candy));
-        wiese.valueIncreaseTest(blubb, candy);
-        System.out.println(blubb.get(candy));
-        wiese.valueDecreaseTest(blubb, candy);
-        wiese.valueDecreaseTest(blubb, candy);
-        System.out.println(blubb.get(candy));
+
+
 
     }
 
-    public void valueIncreaseTest(HashMap<Candy, Integer> blubb, Candy candy){
-        int value = blubb.get(candy);
-        blubb.put(candy, value + 1);
+    public int quadrat(int a){
+        return a * a;
     }
 
-    public void valueDecreaseTest(HashMap<Candy, Integer> blubb, Candy candy){
-        int value = blubb.get(candy);
-        blubb.put(candy, value - 1);
+    public void valueIncreaseTest(HashMap<Collection, Integer> blubb, Collection collection){
+        int value = blubb.get(collection);
+        blubb.put(collection, value + 1);
+    }
+
+    public void valueDecreaseTest(HashMap<Collection, Integer> blubb, Collection collection){
+        int value = blubb.get(collection);
+        blubb.put(collection, value - 1);
     }
 
 }
