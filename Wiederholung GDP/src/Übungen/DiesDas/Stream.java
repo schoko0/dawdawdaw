@@ -32,7 +32,7 @@ public class Stream {
         OptionalDouble avg2 = lst.stream()
                 .mapToInt(s -> s.length())
                 .average();
-        W.w(avg2);                                      // Ausgabe OpstionalDouble[4.92]
+//        W.w(avg2);                                      // Ausgabe OpstionalDouble[4.92]
 
         // Liste der Zahlen von 1 bis 10
         List<Integer> zahlen = new ArrayList<Integer>();

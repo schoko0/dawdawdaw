@@ -15,7 +15,7 @@ public class blubb {
             }
 
         }
-        W.w(größteZahl);
+//        W.w(größteZahl);
     }
 }
 
