@@ -1,4 +1,4 @@
-package Übungen.gdpPraktikum07;
+package praktikum_7;
 
 /**
  * Created by sniendorf on 12.08.2016.

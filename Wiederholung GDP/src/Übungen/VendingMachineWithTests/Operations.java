@@ -1,6 +1,10 @@
 package Übungen.vendingMachineWithTests;
 
 
+import Übungen.vendingMachineWithTests.Collection.ProductRangeAndValues;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Operations {
 
@@ -21,5 +25,28 @@ public class Operations {
         if(costs == paid){return 0;}                    //returns if exactly paid
         if(costs > paid){return -2;}                    //returns if not enough paid
         return paid - costs;                            //returns the change
+    }
+
+    public void resetStock(Map<ProductRangeAndValues, Integer> collectionToBeReset, ProductRangeAndValues stockFromCollection) {
+        if(collectionToBeReset == null || stockFromCollection == null){
+            throw new IllegalArgumentException("WARNUNG: LEERE MAP ODER LEERE AUSWAHL!");
+
+        }else {
+            collectionToBeReset.put(stockFromCollection, stockFromCollection.stock);
+        }
+    }
+
+    public void valueIncrease(Map<ProductRangeAndValues, Integer> blubb, ProductRangeAndValues collection) {
+        blubb.put(collection, blubb.get(collection) + 1);
+    }
+
+    public void valueDecrease(Map<ProductRangeAndValues, Integer> blubb, ProductRangeAndValues collection) {
+        int compare = blubb.get(ProductRangeAndValues.PEPSI);
+        if(compare > 0) {
+            blubb.put(collection, blubb.get(collection) - 1);
+        } else {
+            System.out.println("WARNUNG: MAP LEER ODER STOCK BEI 0!");
+
+        }
     }
 }

@@ -1,4 +1,4 @@
-package Übungen.gdpPraktikum07;
+package praktikum_7;
 
 /**
  * Created by sniendorf on 12.08.2016.
@@ -78,7 +78,61 @@ public class SLLIntOperation {
             tmp = new SLLInt(tmp.element, copyAndInsert(value, tmp.next));
         }
         return tmp;
-        }
-
-
     }
+
+    public static SLLInt copyAndRemove (int value, SLLInt seq) {
+//        SLLInt tmp = seq;
+//        SLLInt tmp2 = seq;
+//        if (tmp.element == value) {
+//            tmp = tmp.next;
+//        } else {
+//            while (tmp2.next != null) {
+//                if (tmp2.next.element == value) {
+//                    tmp2.next = tmp2.next.next;
+//                } else {
+//                    tmp2 = tmp2.next;
+//                }
+//            }
+//        }
+//        System.out.println(getString(seq));
+//        return tmp;
+        if (seq == null) {
+            return null;
+        }
+        SLLInt head = null;
+        SLLInt tail = null;
+
+        while (seq != null) {
+            if (seq.element != value) {
+                if (head == null) {
+                    head = new SLLInt(seq.element, seq.next);
+                    tail = head;
+                } else {
+                    tail.next = new SLLInt(seq.element);
+                    tail = tail.next;
+                }
+            }
+            seq = seq.next;
+        }
+        return head;
+    }
+
+    public static SLLInt remove (int value, SLLInt seq){
+        if(seq == null){return null;}
+        if(seq.element == value){
+            seq = remove(value, seq.next);
+        } else {
+            seq.next = remove(value,seq.next);
+        }
+        return seq;
+    }
+
+
+}
+
+
+
+
+
+
+
