@@ -1,9 +1,9 @@
-package Übungen.vendingMachineWithTests.Collection;
+package Übungen.vendingMachineWithTests.databases;
 
 /**
  * Created by sniendorf on 16.08.2016.
  */
-public enum ProductRangeAndValues {
+public enum Product {
     CANDY("CANDY", 50, 50),
     SNACK("SNACK", 90,45),
     NUTS("NUTS", 125,40),
@@ -12,11 +12,11 @@ public enum ProductRangeAndValues {
     SODA("SODA", 115, 40);
 
 
-    public String name;
-    public int price;
-    public int stock;
+    public final String name;
+    public final int price;
+    public final int stock;
 
-    ProductRangeAndValues(String name, int price, int stock){
+    Product(String name, int price, int stock){
         this.name = name;
         this.price = price;
         this.stock = stock;

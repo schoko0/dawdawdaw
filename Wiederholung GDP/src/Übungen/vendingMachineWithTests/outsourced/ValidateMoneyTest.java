@@ -1,9 +1,8 @@
-package Übungen.vendingMachineWithTests.Tests;
+package Übungen.vendingMachineWithTests.outsourced;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import Übungen.vendingMachineWithTests.Operations;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -11,7 +10,7 @@ import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class VendingMachineTest {
+public class ValidateMoneyTest {
 
     private int money;
     private boolean expected;
@@ -26,14 +25,14 @@ public class VendingMachineTest {
         });
     }
 
-    public VendingMachineTest(int money, boolean expected){
+    public ValidateMoneyTest(int money, boolean expected){
         this.expected = expected;
         this.money = money;
 
     }
 
 
-    Operations operations = new Operations();
+    moneyOperations operations = new moneyOperations();
 
     @Test
     public void validateAcceptedMoneyTest(){

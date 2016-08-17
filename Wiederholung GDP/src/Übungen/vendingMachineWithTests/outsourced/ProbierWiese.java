@@ -1,7 +1,7 @@
-package Übungen.vendingMachineWithTests.Tests;
+package Übungen.vendingMachineWithTests.outsourced;
 
 
-import Übungen.vendingMachineWithTests.Collection.ProductRangeAndValues;
+import Übungen.vendingMachineWithTests.databases.Product;
 
 import java.util.HashMap;
 
@@ -11,7 +11,7 @@ public class ProbierWiese {
     public static void main(String[] args) {
 //        HashMap map = new HashMap();
 //
-//        Collection candy1 = new Collection(50);
+//        databases candy1 = new databases(50);
 //
 //        map.put(candy1.getStock(), candy1);
 //
@@ -25,15 +25,15 @@ public class ProbierWiese {
 //        wiese.valueDecreaseTest(blubb, collection);
 //        wiese.valueDecreaseTest(blubb, collection);
 //        System.out.println(blubb.get(collection));
-        HashMap<ProductRangeAndValues, Integer> testHash = new HashMap<>();
+        HashMap<Product, Integer> testHash = new HashMap<>();
 
 
-//        testHash.put(ProductRangeAndValues.CANDY, 5);
-//        System.out.println(testHash.get(ProductRangeAndValues.CANDY));
-//        wiese.valueIncreaseTestEnum(testHash, ProductRangeAndValues.CANDY);
-//        System.out.println(testHash.get(ProductRangeAndValues.CANDY));
-//        wiese.resetStock(testHash, ProductRangeAndValues.CANDY);
-//        System.out.println(testHash.get(ProductRangeAndValues.CANDY));
+//        testHash.put(Product.CANDY, 5);
+//        System.out.println(testHash.get(Product.CANDY));
+//        wiese.valueIncreaseTestEnum(testHash, Product.CANDY);
+//        System.out.println(testHash.get(Product.CANDY));
+//        wiese.resetStockToFullAmount(testHash, Product.CANDY);
+//        System.out.println(testHash.get(Product.CANDY));
 
 
 
@@ -45,12 +45,12 @@ public class ProbierWiese {
 //        return a * a;
 //    }
 //
-//    public void valueIncreaseTest(Map<Collection, Integer> blubb, Collection collection) {
+//    public void valueIncreaseTest(Map<databases, Integer> blubb, databases collection) {
 //        int value = blubb.get(collection);
 //        blubb.put(collection, value + 1);
 //    }
 //
-//    public void valueDecreaseTest(HashMap<Collection, Integer> blubb, Collection collection) {
+//    public void valueDecreaseTest(HashMap<databases, Integer> blubb, databases collection) {
 //        int value = blubb.get(collection);
 //        blubb.put(collection, value - 1);
 //    }
