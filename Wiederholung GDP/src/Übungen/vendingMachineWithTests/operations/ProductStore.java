@@ -33,6 +33,12 @@ public class ProductStore {
         return price.price;
     }
 
+    public void allProductsToFullStock(){
+        for(Product product : Product.values()) {
+            resetStockToFullAmount(product, product.stock);
+        }
+    }
+
     public void resetStockToFullAmount(Product product, int amount) {
         for (int i = 1; i <= amount; i++) {
             increase(product);

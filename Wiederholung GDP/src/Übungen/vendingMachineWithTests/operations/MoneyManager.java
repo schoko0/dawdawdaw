@@ -15,7 +15,6 @@ public class MoneyManager {
         this.amountOfMoney = new ArrayList<>();
     }
 
-
     public int increaseAmountOfCoins(Money coinToAdd) {
         amountOfMoney.add(coinToAdd);
         return amountOfMoney.size();
@@ -54,16 +53,15 @@ public class MoneyManager {
         throw new IllegalArgumentException("HIER IST IRGENDETWAS SCHIEF GELAUFEN!");
     }
 
-//    public boolean validateInputMoney(int input) {
-//        for (int i = 0; i < acceptedMoney.length; i++) {
-//            if (input == acceptedMoney[i]) {
-//                return true;
-//            }
-//        }
-////        throw new IllegalArgumentException("WARNUNG: FALSCHE MÜNZE EINGEWORFEN!");
-//        System.out.println("WARNUNG: FALSCHE MÜNZE EINGEWORFEN!\nVERSUCHEN SIE ES ERNEUT!");
-//        return false;
-//    }
+    public boolean validateInputMoney(int input) {
+        for(Money p : Money.values()) {
+            if (p.value == input) {
+                return true;
+            }
+        }
+        System.out.println("WARNUNG: FALSCHE MÜNZE EINGEWORFEN!\nVERSUCHEN SIE ES ERNEUT!");
+        return false;
+    }
 
     public int calculatesRestToPay(int price, MoneyManager moneyManager) {
         int rest = moneyManager.getAmountOfPaidMoney() - price;
@@ -83,14 +81,6 @@ public class MoneyManager {
 
             }
         }
-
-
-//        for (int i = 0; i < acceptedMoney.length; i++) {
-//            if (absoluteChange >= acceptedMoney[i]) {
-//                changeInCoins.add(acceptedMoney[i]);
-//                absoluteChange -= acceptedMoney[i];
-//            }
-//        }
         return changeInCoins;
     }
 

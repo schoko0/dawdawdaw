@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import Übungen.vendingMachineWithTests.databases.Money;
 import Übungen.vendingMachineWithTests.databases.Product;
+import Übungen.vendingMachineWithTests.operations.CombinedOperations;
 import Übungen.vendingMachineWithTests.operations.MoneyManager;
 
 import java.util.ArrayList;
@@ -16,10 +17,12 @@ import static org.junit.Assert.assertEquals;
 public class MoneyTest {
 
     private MoneyManager moneyManager;
+    private CombinedOperations combinedOperations;
 
     @Before
     public void setUp() throws Exception{
         moneyManager = new MoneyManager();
+        combinedOperations = new CombinedOperations();
     }
 
     @Rule
@@ -61,26 +64,26 @@ public class MoneyTest {
         assertEquals(Money.FIFTY_CENTS, moneyManager.convertInputToMoneyEnum(55, false));
     }
 
-//    @Test
-//    public void shouldReturnTrueWithValidMoneyInput(){
-//        for (Money p : Money.values()) {
-//            assertEquals(true, moneyManager.validateInputMoney(p.value));
-//        }
-//    }
+    @Test
+    public void shouldReturnTrueWithValidMoneyInput(){
+        for (Money p : Money.values()) {
+            assertEquals(true, moneyManager.validateInputMoney(p.value));
+        }
+    }
 
-//    @Test
-//    public void shouldThrowAnExceptionWithInvalidMoneyInput(){
-////        exception.expect(IllegalArgumentException.class);
-//        assertEquals(false, moneyManager.validateInputMoney(25));
-//    }
+    @Test
+    public void shouldThrowAnExceptionWithInvalidMoneyInput(){
+//        exception.expect(IllegalArgumentException.class);
+        assertEquals(false, moneyManager.validateInputMoney(25));
+    }
 
-//    @Test
-//    public void shouldReturnTheCorrectRest(){
-//        moneyManager.saveInput(50);
-//        moneyManager.saveInput(100);
-//
-//        assertEquals(100, moneyManager.calculatesRestToPay(Product.CANDY.price, moneyManager));
-//    }
+    @Test
+    public void shouldReturnTheCorrectRest(){
+        combinedOperations.saveInputMoney(50);
+        combinedOperations.saveInputMoney(100);
+
+        assertEquals(100, moneyManager.calculatesRestToPay(Product.CANDY.price, combinedOperations.moneyManager));
+    }
 
     @Test
     public void shouldReturnChangeWithValidCoins(){
@@ -92,31 +95,9 @@ public class MoneyTest {
         assertEquals(comparable, moneyManager.returnChangeInCoins(450));
     }
 
-//    @Test
-//    public void shouldSaveInputToEnumInRightOrder(){
-////        moneyManager.increaseAmountOfCoins(Money.ONE_EURO);
-////        moneyManager.increaseAmountOfCoins(Money.ONE_EURO);
-//        assertEquals(1, moneyManager.saveInput(20));
-//    }
+    @Test
+    public void shouldSaveInputToEnumInRightOrder(){
+        assertEquals(1, combinedOperations.saveInputMoney(20));
+    }
 
-
-
-
-
-
-
-
-
-
-    /*public static void main(String[] args) {
-        MoneyManager test = new MoneyManager();
-        int coin1 = 50;
-        int coin2 = 100;
-        int coin3 = 20;
-
-        test.increaseAmountOfCoins(test.convertInputToMoneyEnum(coin1, test.validateInputMoney(coin1)));
-        test.increaseAmountOfCoins(test.convertInputToMoneyEnum(coin2, test.validateInputMoney(coin2)));
-        test.increaseAmountOfCoins(test.convertInputToMoneyEnum(coin3, test.validateInputMoney(coin3)));
-        System.out.println(test.getAmountOfPaidMoney());
-    }*/
 }

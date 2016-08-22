@@ -46,11 +46,21 @@ public class ProductTest {
     }
 
     @Test
-    public void shouldResetStockToStartAmount(){
+    public void shouldResetSingleProductToStartAmount(){
         int amount = new Random().nextInt(200);
         productStore.resetStockToFullAmount(Product.CANDY, amount);
         productStore.increase(Product.CANDY);
         Assert.assertEquals(amount, productStore.decrease(Product.CANDY));
+    }
+
+    @Test
+    public void shouldResetTheHoleStockToFullAmount(){
+        productStore.allProductsToFullStock();
+        int amount = 0;
+        for(Product p : Product.values()){
+            amount += p.stock;
+        }
+        Assert.assertEquals(amount - 1, productStore.decrease(Product.CANDY));
     }
 
 
