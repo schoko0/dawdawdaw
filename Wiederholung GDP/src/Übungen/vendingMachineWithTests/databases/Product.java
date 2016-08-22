@@ -6,10 +6,10 @@ package Übungen.vendingMachineWithTests.databases;
 public enum Product {
     CANDY("CANDY", 50, 50),
     SNACK("SNACK", 90,45),
-    NUTS("NUTS", 125,40),
+    NUTS("NUTS", 120,40),
     COCACOLA("COCA COLA", 110, 30),
     PEPSI("PEPSI", 150, 20),
-    SODA("SODA", 115, 40);
+    SODA("SODA", 110, 40);
 
 
     public final String name;

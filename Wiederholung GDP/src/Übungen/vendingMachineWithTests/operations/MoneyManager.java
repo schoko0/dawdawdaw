@@ -64,9 +64,13 @@ public class MoneyManager {
     }
 
     public int calculatesRestToPay(int price, MoneyManager moneyManager) {
-        int rest = moneyManager.getAmountOfPaidMoney() - price;
+        int rest = price - moneyManager.getAmountOfPaidMoney();
         return rest;
     }
+
+//    public int calculatesRestToPay(int price, int paid){
+//        return price - paid;
+//    }
 
     public ArrayList<Integer> returnChangeInCoins(int change) {
         int absoluteChange = Math.abs(change);

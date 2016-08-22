@@ -29,8 +29,22 @@ public class ProductStore {
         return name.name;
     }
 
-    public int getPrice(Product price) {
-        return price.price;
+    public int getPrice(int product){
+        switch (product){
+            case 1 :
+                return Product.CANDY.price;
+            case 2 :
+                return Product.SNACK.price;
+            case 3 :
+                return Product.NUTS.price;
+            case 4 :
+                return Product.COCACOLA.price;
+            case 5 :
+                return Product.PEPSI.price;
+            case 6 :
+                return Product.SODA.price;
+        }
+        return 0;
     }
 
     public void allProductsToFullStock(){
@@ -43,6 +57,16 @@ public class ProductStore {
         for (int i = 1; i <= amount; i++) {
             increase(product);
         }
+    }
+
+    public boolean isProductAvailable(ProductStore product, Product chosenProduct){
+        for(Product s : product.products){
+            if(s == chosenProduct){
+                return true;
+            }
+        }
+        System.out.println("\nBITTE WÄHLEN SIE EIN ANDERES GETRÄNK!");
+        return false;
     }
 
 }
