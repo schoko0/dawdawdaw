@@ -1,4 +1,5 @@
 package Übungen.DiesDas;
+import java.lang.reflect.Array;
 import java.util.*;
 import java.awt.Point;
 /**
@@ -37,6 +38,15 @@ public class A {
 
         System.out.println(dict.get("three"));
         System.out.println(dict.get("Nur der"));
+
+        String [] ar = {"Hello", "was", "geht?"};
+        Arrays.asList(ar).forEach(s -> System.out.println(s));
+
+        List<Integer> data = Arrays.asList(7,2,5,4);
+        Optional<Integer> minimum = data.stream().reduce(Math::min);
+        System.out.println("\n\n\n\n"+minimum);
+        minimum = data.stream().reduce((i1,i2) -> Math.max(i1, i2));
+        System.out.println("\n\n\n\n"+minimum);
     }
 
 

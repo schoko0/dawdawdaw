@@ -24,11 +24,11 @@ public class CombinedOperations {
                         "5 = PEPSI____________1,50 DOLLAR\n" +
                         "6 = SODA_____________1,15 DOLLAR\n\n" +
                         "FOLGENDE MÜNZEN SIND ERLAUBT: \n" +
-                        "100 CENTS, 200 CENTS, 50 CENTS, 20 CENTS, 10 CENTS , 5 CENTS\n");
+                        "100 CENTS, 200 CENTS, 50 CENTS, 20 CENTS, 10 CENTS\n");
     }
 
     public void goodBye(){
-        System.out.println(" \nVIELEN DANK FÜR IHREN EINKAUF!");
+        System.out.println(" \nVIELEN DANK FÜR IHREN EINKAUF!\n\n\n\n");
     }
 
     public Product convertInputIntoProduct(int input){
