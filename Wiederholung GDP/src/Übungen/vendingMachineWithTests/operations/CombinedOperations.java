@@ -1,6 +1,5 @@
 package Übungen.vendingMachineWithTests.operations;
 
-import Übungen.vendingMachineWithTests.databases.Money;
 import Übungen.vendingMachineWithTests.databases.Product;
 
 public class CombinedOperations {
