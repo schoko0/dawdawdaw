@@ -2,3 +2,5 @@
 *.iml
 unit-testing-demo/build/
 unit-testing-demo/src/test/java/com/github/kolorobot/mockito/annotations/NumberPrinterTest2.java
+javascript/
+untitled/
