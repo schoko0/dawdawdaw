@@ -10,6 +10,6 @@ public class Medium {
         public String getTitle() { return title; }
 
     public void println() {
-        System.out.println("Mediumtitel: " + title);
+        System.out.println("Mediumtitel: " + title          );
     }
 }
