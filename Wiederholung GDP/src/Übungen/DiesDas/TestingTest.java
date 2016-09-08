@@ -19,7 +19,6 @@ public class TestingTest {
 
     public static void main(String[] args) {
 
-
         Medium m = new Medium("Medium-Titel");
         Book b = new Book("Buch-Titel", 127);
         m.println();
