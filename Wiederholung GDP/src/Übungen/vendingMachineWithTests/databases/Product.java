@@ -8,7 +8,7 @@ public enum Product {
     SNACK("SNACK", 90,45),
     NUTS("NUTS", 120,40),
     COCACOLA("COCA COLA", 110, 30),
-    PEPSI("PEPSI", 150, 2),
+    PEPSI("PEPSI", 150, 20),
     SODA("SODA", 110, 40);
 
 

@@ -50,11 +50,12 @@ public class CombinedOperations {
                         "5 = PEPSI____________1,50 DOLLAR\n" +
                         "6 = SODA_____________1,15 DOLLAR\n\n" +
                         "FOLGENDE MÜNZEN SIND ERLAUBT: \n" +
-                        "100 CENTS, 200 CENTS, 50 CENTS, 20 CENTS, 10 CENTS\n");
+                        "1 EURO, 2 EURO, 50 CENTS, 20 CENTS, 10 CENTS\n");
     }
 
     public void goodBye(){
-        System.out.println(" \nVIELEN DANK FÜR IHREN EINKAUF!\n\n\n\n");
+        System.out.println(" \nVIELEN DANK FÜR IHREN EINKAUF!\n\n" +
+                              "______________________________________________\n\n");
     }
 
     public Product convertInputIntoProduct(int input){
@@ -129,7 +130,13 @@ public class CombinedOperations {
             moneyManager.returnChangeInCoins(change);
             System.out.println("IHR RÜCKGELD: ");
             for(int a : moneyManager.returnChangeInCoins(change)){
-                System.out.println(a + " CENTS");
+                if(a == 200){
+                    System.out.println((a - 198) + " EURO");
+                } else if (a == 100){
+                    System.out.println((a - 99) + " EURO");
+                } else {
+                    System.out.println(a + " CENTS");
+                }
             }
         }
         moneyManager.flush();

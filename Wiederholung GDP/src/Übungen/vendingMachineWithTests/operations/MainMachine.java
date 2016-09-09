@@ -3,6 +3,7 @@ package Übungen.vendingMachineWithTests.operations;
 
 import Übungen.vendingMachineWithTests.databases.Product;
 
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class MainMachine {
@@ -29,10 +30,15 @@ public class MainMachine {
              */
             Scanner scannerInput = new Scanner(System.in);
             boolean productAvailability = false;
-            String inputProduct = "1";
+            String inputProduct = "k";
 
             while (productAvailability == false) {
-                inputProduct = scannerInput.next();
+                try {
+                    inputProduct = scannerInput.next();
+                } catch (NoSuchElementException ex) {
+                    System.out.println("Pffff. Tststs.");
+                    inputProduct = "";
+                }
                 if(combinedOperations.isNotAString(inputProduct)) {
                     int inputProductIsNotAString = Integer.parseInt(inputProduct);
                     if(combinedOperations.isBetween1And6(inputProductIsNotAString)) {
@@ -50,9 +56,14 @@ public class MainMachine {
             while (rest > 0) {
 
                 inputMoney = scannerInput.next();
+                int inputMoneyInInt = 0;
                 if(combinedOperations.isNotAString(inputMoney)) {
-//                    int inputProductIsNotAString = Integer.parseInt(inputProduct);
-                    combinedOperations.saveInputMoney(Integer.parseInt(inputMoney));
+                    if(Integer.parseInt(inputMoney) == 2){
+                        inputMoneyInInt = 200;
+                    }else if(Integer.parseInt(inputMoney) == 1){
+                        inputMoneyInInt = 100;
+                    }
+                    combinedOperations.saveInputMoney(inputMoneyInInt);
                     rest = combinedOperations.showRestToPay(Integer.parseInt(inputProduct), combinedOperations.moneyManager);
                 }
             }
