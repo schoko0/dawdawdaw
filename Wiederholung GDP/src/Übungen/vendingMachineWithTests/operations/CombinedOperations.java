@@ -108,6 +108,8 @@ public class CombinedOperations {
                 System.out.println(a + " CENTS");
             }
         }
+        moneyManager.flush();
     }
+
 
 }

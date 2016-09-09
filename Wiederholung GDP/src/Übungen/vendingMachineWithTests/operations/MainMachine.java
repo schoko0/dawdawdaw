@@ -25,8 +25,7 @@ public class MainMachine {
             combinedOperations.greeting();
 
             /**
-             * Reads the input of the chosen product from the keyboard
-             * and returns the price
+             * Reads the input of the chosen product from the keyboard and returns the price
              */
             Scanner scannerInput = new Scanner(System.in);
             boolean productAvailability = false;
@@ -55,7 +54,9 @@ public class MainMachine {
              * Returns the change
              */
             combinedOperations.returnChangeInCoins(rest);
+            productStore.decrease(combinedOperations.convertInputIntoProduct(Integer.parseInt(inputProduct)));
             combinedOperations.goodBye();
+
 
         }
     }

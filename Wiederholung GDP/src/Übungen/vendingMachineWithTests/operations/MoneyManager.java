@@ -91,5 +91,9 @@ public class MoneyManager {
         return changeInCoins;
     }
 
+    public void flush(){
+        amountOfMoney.clear();
+    }
+
 
 }
