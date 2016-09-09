@@ -1,4 +1,4 @@
-package Übungen.VendingMachine;
+package Übungen.VendingMachineOLDVERSION;
 
 /**
  * Created by sniendorf on 04.08.2016.

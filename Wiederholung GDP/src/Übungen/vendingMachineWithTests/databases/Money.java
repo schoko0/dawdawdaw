@@ -13,7 +13,5 @@ public enum Money {
     Money(int value){
         this.value = value;
     }
-
-
 }
 

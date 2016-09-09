@@ -1,6 +1,4 @@
-package Übungen.VendingMachine;
-
-import org.mockito.internal.matchers.Null;
+package Übungen.VendingMachineOLDVERSION;
 
 /**
  * Created by sniendorf on 04.08.2016.

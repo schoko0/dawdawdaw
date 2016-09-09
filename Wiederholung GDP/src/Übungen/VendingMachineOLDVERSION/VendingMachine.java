@@ -1,6 +1,5 @@
-package Übungen.VendingMachine;
+package Übungen.VendingMachineOLDVERSION;
 
-import java.util.Arrays;
 import java.util.Scanner;       //allows user input
 
 

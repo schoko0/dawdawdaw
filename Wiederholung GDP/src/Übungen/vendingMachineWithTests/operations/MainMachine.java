@@ -33,7 +33,12 @@ public class MainMachine {
 
             while (productAvailability == false) {
                 inputProduct = scannerInput.next();
-                productAvailability = productStore.isProductAvailable(productStore, combinedOperations.convertInputIntoProduct(Integer.parseInt(inputProduct)));
+                if(combinedOperations.isNotAString(inputProduct)) {
+                    int inputProductIsNotAString = Integer.parseInt(inputProduct);
+                    if(combinedOperations.isBetween1And6(inputProductIsNotAString)) {
+                        productAvailability = productStore.isProductAvailable(productStore, combinedOperations.convertInputIntoProduct(Integer.parseInt(inputProduct)));
+                    }
+                }
             }
             combinedOperations.chosenProduct(combinedOperations.convertInputIntoProduct(Integer.parseInt(inputProduct)), productAvailability);
 
@@ -45,9 +50,11 @@ public class MainMachine {
             while (rest > 0) {
 
                 inputMoney = scannerInput.next();
-                combinedOperations.saveInputMoney(Integer.parseInt(inputMoney));
-
-                rest = combinedOperations.showRestToPay(Integer.parseInt(inputProduct), combinedOperations.moneyManager);
+                if(combinedOperations.isNotAString(inputMoney)) {
+//                    int inputProductIsNotAString = Integer.parseInt(inputProduct);
+                    combinedOperations.saveInputMoney(Integer.parseInt(inputMoney));
+                    rest = combinedOperations.showRestToPay(Integer.parseInt(inputProduct), combinedOperations.moneyManager);
+                }
             }
 
             /**
@@ -57,6 +64,14 @@ public class MainMachine {
             productStore.decrease(combinedOperations.convertInputIntoProduct(Integer.parseInt(inputProduct)));
             combinedOperations.goodBye();
 
+            /**
+             * Waiting a short time, before it starts again
+             */
+            try{
+                Thread.sleep(4000);
+            }catch(InterruptedException e){
+                e.printStackTrace();
+            }
 
         }
     }

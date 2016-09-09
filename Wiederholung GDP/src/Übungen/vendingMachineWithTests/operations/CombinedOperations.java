@@ -1,5 +1,6 @@
 package Übungen.vendingMachineWithTests.operations;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
 import Übungen.vendingMachineWithTests.databases.Product;
 
 public class CombinedOperations {
@@ -8,11 +9,34 @@ public class CombinedOperations {
 
 
     public int saveInputMoney(int i) {
-        boolean inputMoney = false;
-        if (!inputMoney)
-            inputMoney =  moneyManager.validateInputMoney(i);
+        return moneyManager.increaseAmountOfCoins(moneyManager.convertInputToMoneyEnum(i, moneyManager.validateInputMoney(i)));
+    }
 
-        return moneyManager.increaseAmountOfCoins(moneyManager.convertInputToMoneyEnum(i, inputMoney));
+    public boolean isNotAString(String a){
+        String compare = "1234567890";
+        int counter = 0;
+        for(int i = 0; i < a.length(); i++){
+            for(int j = 0; j < compare.length(); j++){
+                if(a.charAt(i) == compare.charAt(j)) {
+                    counter++;
+                }
+            }
+        }
+        if(counter < a.length()){
+            System.out.println("BITTE KEINE BUCHSTABEN, SONDERZEICHEN ODER NEGATIVE ZAHLEN EINGEBEN!");
+            return false;
+        }
+        return true;
+    }
+
+    public boolean isBetween1And6(int a){
+        if((a < 7) && (a > 0)){
+            return true;
+        }else{
+            System.out.println("BITTE EINE ZAHL ZWISCHEN 1 UND 6 EINGEBEN!");
+        }
+
+        return false;
     }
 
     public void greeting() {
