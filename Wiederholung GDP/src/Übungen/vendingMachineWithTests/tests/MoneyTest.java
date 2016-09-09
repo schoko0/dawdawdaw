@@ -60,8 +60,7 @@ public class MoneyTest {
 
     @Test
     public void shouldCheckIfInputIsAssignedWrongly(){
-        exception.expect(IllegalArgumentException.class);
-        assertEquals(Money.FIFTY_CENTS, moneyManager.convertInputToMoneyEnum(55, false));
+        assertEquals(null, moneyManager.convertInputToMoneyEnum(55, false));
     }
 
     @Test

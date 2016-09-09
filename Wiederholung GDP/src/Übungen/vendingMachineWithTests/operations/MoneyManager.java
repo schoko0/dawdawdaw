@@ -52,7 +52,6 @@ public class MoneyManager {
                     return Money.TWO_EUROS;
             }
         }
-//        throw new IllegalArgumentException("HIER IST IRGENDETWAS SCHIEF GELAUFEN!");
         return null;
     }
 
