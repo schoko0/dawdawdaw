@@ -16,8 +16,10 @@ public class MoneyManager {
     }
 
     public int increaseAmountOfCoins(Money coinToAdd) {
+        if(coinToAdd == null){return 0;
+        } else {
         amountOfMoney.add(coinToAdd);
-        return amountOfMoney.size();
+        return amountOfMoney.size();}
     }
 
     private int decreaseAmountOfCoins(Money coinToRemove) {
@@ -50,7 +52,8 @@ public class MoneyManager {
                     return Money.TWO_EUROS;
             }
         }
-        throw new IllegalArgumentException("HIER IST IRGENDETWAS SCHIEF GELAUFEN!");
+//        throw new IllegalArgumentException("HIER IST IRGENDETWAS SCHIEF GELAUFEN!");
+        return null;
     }
 
     public boolean validateInputMoney(int input) {

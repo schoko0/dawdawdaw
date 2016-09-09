@@ -44,6 +44,7 @@ public class MainMachine {
             int rest = 1;
             String inputMoney;
             while (rest > 0) {
+
                 inputMoney = scannerInput.next();
                 combinedOperations.saveInputMoney(Integer.parseInt(inputMoney));
 

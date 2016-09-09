@@ -8,8 +8,11 @@ public class CombinedOperations {
 
 
     public int saveInputMoney(int i) {
+        boolean inputMoney = false;
+        if (!inputMoney)
+            inputMoney =  moneyManager.validateInputMoney(i);
 
-        return moneyManager.increaseAmountOfCoins(moneyManager.convertInputToMoneyEnum(i, moneyManager.validateInputMoney(i)));
+        return moneyManager.increaseAmountOfCoins(moneyManager.convertInputToMoneyEnum(i, inputMoney));
     }
 
     public void greeting() {
