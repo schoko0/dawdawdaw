@@ -5,9 +5,6 @@ import Übungen.vendingMachineWithTests.databases.Product;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by sniendorf on 17.08.2016.
- */
 public class ProductStore {
 
     private final List<Product> products;
@@ -47,12 +44,6 @@ public class ProductStore {
         return 0;
     }
 
-    public void allProductsToFullStock(){
-        for(Product product : Product.values()) {
-            resetStockToFullAmount(product, product.stock);
-        }
-    }
-
     public void resetStockToFullAmount(Product product, int amount) {
         for (int i = 1; i <= amount; i++) {
             increase(product);
@@ -65,7 +56,7 @@ public class ProductStore {
                 return true;
             }
         }
-        System.out.println("\nBITTE WÄHLEN SIE EIN ANDERES GETRÄNK!");
+        System.out.println("\nBITTE WÄHLEN SIE EIN ANDERES PRODUKT!");
         return false;
     }
 

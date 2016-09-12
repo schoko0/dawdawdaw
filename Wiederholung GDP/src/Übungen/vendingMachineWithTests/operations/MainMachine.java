@@ -9,13 +9,12 @@ import java.util.Scanner;
 public class MainMachine {
 
     public static void main(String[] args) {
-        ProductStore productStore = new ProductStore();
         CombinedOperations combinedOperations = new CombinedOperations();
 
         /**
          * Sets the Stock of the vending machine to full amount
          */
-        productStore.allProductsToFullStock();
+        combinedOperations.allProductsToFullStock();
 
 
         while (true) {
@@ -30,19 +29,13 @@ public class MainMachine {
              */
             Scanner scannerInput = new Scanner(System.in);
             boolean productAvailability = false;
-            String inputProduct = "k";
-
-            while (productAvailability == false) {
-                try {
-                    inputProduct = scannerInput.next();
-                } catch (NoSuchElementException ex) {
-                    System.out.println("Pffff. Tststs.");
-                    inputProduct = "";
-                }
+            String inputProduct = "";
+            while (!productAvailability) {
+                inputProduct = scannerInput.next();
                 if(combinedOperations.isNotAString(inputProduct)) {
                     int inputProductIsNotAString = Integer.parseInt(inputProduct);
                     if(combinedOperations.isBetween1And6(inputProductIsNotAString)) {
-                        productAvailability = productStore.isProductAvailable(productStore, combinedOperations.convertInputIntoProduct(Integer.parseInt(inputProduct)));
+                        productAvailability = combinedOperations.productStore.isProductAvailable(combinedOperations.productStore, combinedOperations.convertInputIntoProduct(Integer.parseInt(inputProduct)));
                     }
                 }
             }
@@ -54,15 +47,10 @@ public class MainMachine {
             int rest = 1;
             String inputMoney;
             while (rest > 0) {
-
                 inputMoney = scannerInput.next();
-                int inputMoneyInInt = 0;
                 if(combinedOperations.isNotAString(inputMoney)) {
-                    if(Integer.parseInt(inputMoney) == 2){
-                        inputMoneyInInt = 200;
-                    }else if(Integer.parseInt(inputMoney) == 1){
-                        inputMoneyInInt = 100;
-                    }
+                    combinedOperations.returnEuroOrCents(inputMoney);
+                    int inputMoneyInInt = combinedOperations.checkIfEuro(inputMoney);
                     combinedOperations.saveInputMoney(inputMoneyInInt);
                     rest = combinedOperations.showRestToPay(Integer.parseInt(inputProduct), combinedOperations.moneyManager);
                 }
@@ -72,7 +60,7 @@ public class MainMachine {
              * Returns the change
              */
             combinedOperations.returnChangeInCoins(rest);
-            productStore.decrease(combinedOperations.convertInputIntoProduct(Integer.parseInt(inputProduct)));
+            combinedOperations.decrease(combinedOperations.convertInputIntoProduct(Integer.parseInt(inputProduct)));
             combinedOperations.goodBye();
 
             /**

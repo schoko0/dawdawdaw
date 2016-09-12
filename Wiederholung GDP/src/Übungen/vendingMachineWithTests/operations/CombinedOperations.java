@@ -43,12 +43,12 @@ public class CombinedOperations {
 
         System.out.println(
                 "BITTE DIE ENTSPRECHENDE ZAHL EINGEBEN:\n\n" +
-                        "1 = CANDY____________0,50 DOLLAR\n" +
-                        "2 = SNACK____________0,90 DOLLAR\n" +
-                        "3 = NUTS_____________1,25 DOLLAR\n" +
-                        "4 = COCA COLA________1,10 DOLLAR\n" +
-                        "5 = PEPSI____________1,50 DOLLAR\n" +
-                        "6 = SODA_____________1,15 DOLLAR\n\n" +
+                        "1 = CANDY____________0,50 EURO\n" +
+                        "2 = SNACK____________0,90 EURO\n" +
+                        "3 = NUTS_____________1,25 EURO\n" +
+                        "4 = COCA COLA________1,10 EURO\n" +
+                        "5 = PEPSI____________1,50 EURO\n" +
+                        "6 = SODA_____________1,15 EURO\n\n" +
                         "FOLGENDE MÜNZEN SIND ERLAUBT: \n" +
                         "1 EURO, 2 EURO, 50 CENTS, 20 CENTS, 10 CENTS\n");
     }
@@ -127,19 +127,50 @@ public class CombinedOperations {
         if(change == 0){
             System.out.println("BITTE ENTNEHMEN SIE DAS PRODUKT!");
         } else {
-            moneyManager.returnChangeInCoins(change);
-            System.out.println("IHR RÜCKGELD: ");
+            System.out.println("\n\nIHR RÜCKGELD: ");
             for(int a : moneyManager.returnChangeInCoins(change)){
                 if(a == 200){
-                    System.out.println((a - 198) + " EURO");
+                    System.out.println((a - 198) + "  EURO");
                 } else if (a == 100){
-                    System.out.println((a - 99) + " EURO");
+                    System.out.println((a - 99) + "  EURO");
                 } else {
                     System.out.println(a + " CENTS");
                 }
             }
         }
         moneyManager.flush();
+    }
+
+    public int checkIfEuro(String input) throws IllegalArgumentException{
+        if(Integer.parseInt(input) == 2){
+            return 200;
+        }else if(Integer.parseInt(input) == 1){
+            return 100;
+        }
+        return Integer.parseInt(input);
+    }
+
+    public void decrease(Product product){
+        productStore.decrease(product);
+    }
+
+    public void allProductsToFullStock(){
+        for(Product product : Product.values()) {
+            productStore.resetStockToFullAmount(product, product.stock);
+        }
+    }
+
+    public void returnEuroOrCents(String input){
+        switch(Integer.parseInt(input)){
+            case 1 :
+                System.out.println("EURO");
+                break;
+            case 2 :
+                System.out.println("EURO");
+                break;
+            default:
+                System.out.println("CENTS");
+        }
     }
 
 

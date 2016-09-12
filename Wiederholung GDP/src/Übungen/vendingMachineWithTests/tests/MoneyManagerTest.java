@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
-public class MoneyTest {
+public class MoneyManagerTest {
 
     private MoneyManager moneyManager;
     private CombinedOperations combinedOperations;

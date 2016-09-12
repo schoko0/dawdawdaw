@@ -9,7 +9,7 @@ import Übungen.vendingMachineWithTests.operations.ProductStore;
 import java.util.Random;
 
 
-public class ProductTest {
+public class ProductStoreTest {
 
     private ProductStore productStore;
 
@@ -53,15 +53,7 @@ public class ProductTest {
         Assert.assertEquals(amount, productStore.decrease(Product.CANDY));
     }
 
-    @Test
-    public void shouldResetTheHoleStockToFullAmount(){
-        productStore.allProductsToFullStock();
-        int amount = 0;
-        for(Product p : Product.values()){
-            amount += p.stock;
-        }
-        Assert.assertEquals(amount - 1, productStore.decrease(Product.CANDY));
-    }
+
 
     @Test
     public void isAvailable(){
